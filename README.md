@@ -38,7 +38,7 @@
 ## Инструкции за подесување
 1. Клонирај го repozitory:
    ```bash
-   git clone https://github.com/YourUsername/BoenjeCrnoBeliSliki.git
+   git clone https://github.com/andovskaana/BoenjeCrnoBeliSliki.git
    ```
 2. Влез во датотека каде се наоѓа проектот
    ```bash
