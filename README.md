@@ -36,7 +36,7 @@
   ```
 
 ## Инструкции за подесување
-1. Клонирај го репозиториумот:
+1. Клонирај го repozitory:
    ```bash
    git clone https://github.com/YourUsername/BoenjeCrnoBeliSliki.git
    ```
@@ -44,8 +44,8 @@
    ```bash
    cd BoenjeCrnoBeliSliki
    ```
-3. Импортирајте ги потребните библиотеки
-4. Извршете употреба на соодветната платформа ( Google Colab / PyCharm )
+3. Импортирајте ги и инсталирајте ги потребните библиотеки 
+4. Креирајте соодветни околини за употреба на соодветната платформа ( Google Colab / PyCharm )
 
 ## Извршување на секој дел
 
@@ -54,7 +54,7 @@
 Чекори за извршување:
 - Отвори ја папката `CaffeModel`.
 - Провери дали ги имаш потребните датотеки: `colorization_deploy_v2.prototxt`, `colorization_release_v2.caffemodel`, и `pts_in_hull.npy`.
-- Изврши го Python скриптот:
+- Изврши ја Python скриптата:
   ```bash
   python caffe_colorization.py
   ```
@@ -64,8 +64,8 @@
 
 Чекори за извршување:
 - Отвори `Treniranje_PredTrenirani_Modeli.ipynb` во Google Colab.
-- Обезбеди пристап до Базите на податоци потребни.
-- Изврши ги сите чекори во бележникот `Treniranje_PredTrenirani_Modeli.ipynb` за да го тренираш моделот на избраната база на податоци.
+- Обезбеди пристап до потребните бази на податоци.
+- Изврши ги сите чекори во `Treniranje_PredTrenirani_Modeli.ipynb` за да го тренираш моделот на избраната база на податоци.
 
 ### Сопствен GAN модел со U-Net
 Имплементира сопствена Генеративна Противничка Мрежа (GAN) со U-Net архитектура.
@@ -73,7 +73,7 @@
 Чекори за извршување:
 - Отвори `Treniranje_PredTrenirani_Modeli.ipynb` во Google Colab.
 - Обезбеди пристап до Базите на податоци потребни.
-- Изврши ги сите чекори во бележникот `Treniranje_PredTrenirani_Modeli.ipynb` за да го тренираш моделот на избраната база на податоци.
+- Изврши ги сите чекори во `Treniranje_PredTrenirani_Modeli.ipynb` за да го тренираш моделот на избраната база на податоци.
 
 ### VGG-19 со CUDA и PyTorch
 Овој метод се базира на GAN пристап со VGG-19 архитектура, користејќи CUDA за забрзано тренирање на NVIDIA графички картички.
@@ -91,8 +91,8 @@
 
 Чекори за извршување:
 - Отвори ја папката `GoogleColabs`.
-- Отвори го бележникот `Treniranje_Svoj_Tenserflow_Model.ipynb` во Google Colab.
-- Изврши ги чекорите во бележникот за да го тренираш и тестираш моделот со користење на Oxford-IIIT Pet базата на податоци.
+- Отвори ја датотеката `Treniranje_Svoj_Tenserflow_Model.ipynb` во Google Colab.
+- Изврши ги чекорите во `Treniranje_Svoj_Tenserflow_Model.ipynb` за да го тренираш и тестираш моделот со користење на Oxford-IIIT Pet базата на податоци.
 
 - ## Лиценца
 - Овој проект е лиценциран под MIT лиценца - погледнете ја LICENSE датотеката за детали.
