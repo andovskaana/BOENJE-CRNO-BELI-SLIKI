@@ -63,7 +63,8 @@
 Овој дел користи VGG-16 архитектура за дополнително тренирање на бази на податоци како CIFAR-10, CIFAR-100 и Oxford-IIIT Pet.
 
 Чекори за извршување:
-- Отвори `Treniranje_PredTrenirani_Modeli.ipynb` во Google Colab.
+- Отвори ја папката `GoogleColabs`.
+- Отвори ја датотеката `Treniranje_Svoj_Tenserflow_Model.ipynb` во Google Colab.
 - Обезбеди пристап до потребните бази на податоци.
 - Изврши ги сите чекори во `Treniranje_PredTrenirani_Modeli.ipynb` за да го тренираш моделот на избраната база на податоци.
 
@@ -72,7 +73,7 @@
 
 Чекори за извршување:
 - Отвори `Treniranje_PredTrenirani_Modeli.ipynb` во Google Colab.
-- Обезбеди пристап до Базите на податоци потребни.
+- Обезбеди пристап до потребните бази на податоци потребни.
 - Изврши ги сите чекори во `Treniranje_PredTrenirani_Modeli.ipynb` за да го тренираш моделот на избраната база на податоци.
 
 ### VGG-19 со CUDA и PyTorch
