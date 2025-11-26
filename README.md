@@ -1,99 +1,100 @@
-# Боење на Црно-Бели Слики
-Овој проект се фокусира на автоматско боење на црно-бели слики со користење на различни модели за машинско учење, вклучувајќи претходно тренирани модели, понатамошно тренирање на постоечки архитектури, и градење сопствени модели од почеток. Секој метод е тестиран под различни услови за споредба на нивната ефективност, прецизност и применливост.
+# Coloring Black-and-White Images
+This project focuses on automatic coloring of black-and-white images using different machine learning models, including pre-trained models, further training of existing architectures, and building custom models from scratch. Each method is tested under different conditions to compare their effectiveness, accuracy, and applicability.
 
-## Содржина
-- [Преглед на проектот](#преглед-на-проектот)
-- [Предуслови](#предуслови)
-- [Инструкции за подесување](#инструкции-за-подесување)
-- [Извршување на секој дел](#извршување-на-секој-дел)
-    - [Претходно трениран модел со Caffe](#претходно-трениран-модел-со-caffe)
-    - [Дополнително тренирање со VGG-16](#дополнително-тренирање-со-vgg-16)
-    - [Сопствен GAN модел со U-Net](#сопствен-gan-модел-со-u-net)
-    - [VGG-19 со CUDA и PyTorch](#vgg-19-со-cuda-и-pytorch)
-    - [Сопствен модел со TensorFlow](#сопствен-модел-со-tensorflow)
-- [Лиценца](#лиценца)
+## Contents
+- [Project Overview](#project-overview)
+- [Prerequisites](#prerequisites)
+- [Setup Instructions](#setup-instructions)
+- [Running Each Part](#running-each-part)
+    - [Pre-trained Model with Caffe](#pre-trained-model-with-caffe)
+    - [Additional Training with VGG-16](#additional-training-with-vgg-16)
+    - [Custom GAN Model with U-Net](#custom-gan-model-with-u-net)
+    - [VGG-19 with CUDA and PyTorch](#vgg-19-with-cuda-and-pytorch)
+    - [Custom Model with TensorFlow](#custom-model-with-tensorflow)
+- [License](#license)
 
-## Преглед на проектот
-Овој проект истражува различни методи за автоматско боење на црно-бели слики. Се споредуваат три главни пристапи:
-- Користење на претходно тренирани модели.
-- Дополнително тренирање на постоечки модели со користење на дополнителни бази на податоци.
-- Имплементација на сопствени модели со архитектури како U-Net и GAN.
+## Project Overview
+This project explores different methods for automatic coloring of black-and-white images. Three main approaches are compared:
+- Using pre-trained models.
+- Further training of existing models using additional datasets.
+- Implementing custom models with architectures such as U-Net and GAN.
 
-## Предуслови
+## Prerequisites
 - Python 3.x
-- Jupyter Notebook или Google Colab
+- Jupyter Notebook or Google Colab
 - Git
 - PyTorch, TensorFlow, Keras, OpenCV
-- GPU компатибилен со CUDA (за деловите со PyTorch и CUDA)
-- симнување на CaffeModel потребни датотеки преку еден од двата линкови
-  Официјален
+- GPU compatible with CUDA (for the PyTorch and CUDA parts)
+- Downloading the required CaffeModel files from one of the two links:  
+  Official
   ```bash
   https://github.com/richzhang/colorization
   ```
-  или
+  or
   ```bash
   https://github.com/dhananjayan-r/Colorizer/tree/master/models
   ```
 
-## Инструкции за подесување
-1. Клонирај го repozitory:
+## Setup Instructions
+1. Clone the repository:
    ```bash
    git clone https://github.com/andovskaana/BoenjeCrnoBeliSliki.git
    ```
-2. Влез во датотека каде се наоѓа проектот
+2. Go into the project folder:
    ```bash
    cd BoenjeCrnoBeliSliki
    ```
-3. Импортирајте ги и инсталирајте ги потребните библиотеки 
-4. Креирајте соодветни околини за употреба на соодветната платформа ( Google Colab / PyCharm )
+3. Import and install the required libraries.
+4. Create appropriate environments for the platform you are using (Google Colab / PyCharm).
 
-## Извршување на секој дел
+## Running Each Part
 
-### Претходно трениран модел со Caffe
-Овој метод користи претходно трениран модел од трудот „Colorful Image Colorization“ на Richard Zhang и соработниците, користејќи го Caffe framework и OpenCV.
-Чекори за извршување:
-- Отвори ја папката `CaffeModel`.
-- Провери дали ги имаш потребните датотеки: `colorization_deploy_v2.prototxt`, `colorization_release_v2.caffemodel`, и `pts_in_hull.npy`.
-- Изврши ја Python скриптата:
+### Pre-trained Model with Caffe
+This method uses a pre-trained model from the paper “Colorful Image Colorization” by Richard Zhang et al., using the Caffe framework and OpenCV.  
+Steps to run:
+- Open the `CaffeModel` folder.
+- Check that you have the required files: `colorization_deploy_v2.prototxt`, `colorization_release_v2.caffemodel`, and `pts_in_hull.npy`.
+- Run the Python script:
   ```bash
   python caffe_colorization.py
   ```
 
-### Дополнително тренирање со VGG-16
-Овој дел користи VGG-16 архитектура за дополнително тренирање на бази на податоци како CIFAR-10, CIFAR-100 и Oxford-IIIT Pet.
+### Additional Training with VGG-16
+This part uses the VGG-16 architecture for additional training on datasets such as CIFAR-10, CIFAR-100, and Oxford-IIIT Pet.
 
-Чекори за извршување:
-- Отвори ја папката `GoogleColabs`.
-- Отвори ја датотеката `Treniranje_Svoj_Tenserflow_Model.ipynb` во Google Colab.
-- Обезбеди пристап до потребните бази на податоци.
-- Изврши ги сите чекори во `Treniranje_PredTrenirani_Modeli.ipynb` за да го тренираш моделот на избраната база на податоци.
+Steps to run:
+- Open the `GoogleColabs` folder.
+- Open the `Treniranje_Svoj_Tenserflow_Model.ipynb` file in Google Colab.
+- Provide access to the required datasets.
+- Run all steps in `Treniranje_PredTrenirani_Modeli.ipynb` to train the model on the selected dataset.
 
-### Сопствен GAN модел со U-Net
-Имплементира сопствена Генеративна Противничка Мрежа (GAN) со U-Net архитектура.
+### Custom GAN Model with U-Net
+Implements a custom Generative Adversarial Network (GAN) with a U-Net architecture.
 
-Чекори за извршување:
-- Отвори `Treniranje_PredTrenirani_Modeli.ipynb` во Google Colab.
-- Обезбеди пристап до потребните бази на податоци потребни.
-- Изврши ги сите чекори во `Treniranje_PredTrenirani_Modeli.ipynb` за да го тренираш моделот на избраната база на податоци.
+Steps to run:
+- Open `Treniranje_PredTrenirani_Modeli.ipynb` in Google Colab.
+- Provide access to the required datasets.
+- Run all steps in `Treniranje_PredTrenirani_Modeli.ipynb` to train the model on the selected dataset.
 
-### VGG-19 со CUDA и PyTorch
-Овој метод се базира на GAN пристап со VGG-19 архитектура, користејќи CUDA за забрзано тренирање на NVIDIA графички картички.
+### VGG-19 with CUDA and PyTorch
+This method is based on a GAN approach with the VGG-19 architecture, using CUDA for accelerated training on NVIDIA graphics cards.
 
-Чекори за извршување:
-- Одете во `VGG-ICUDA`.
-- Обезбеди дека имаш CUDA-компатибилна графичка картичка и потребните драјвери.
-- Отвори го `vgg-icuda-nvidia.py` во PyCharm или твојот омилен IDE за Python.
-- Прилагоди ги патеките за базата на податоци и поставките за CUDA по потреба, потоа изврши:
+Steps to run:
+- Go to the `VGG-ICUDA` folder.
+- Make sure you have a CUDA-compatible graphics card and the necessary drivers.
+- Open `vgg-icuda-nvidia.py` in PyCharm or your favorite Python IDE.
+- Adjust the dataset paths and CUDA settings as needed, then run:
   ```bash
   python vgg-icuda-nvidia.py
   ```
-### Сопствен модел со TensorFlow
-Едноставна Конволуциска Невронска Мрежа (CNN) користејќи TensorFlow и Keras за основно боење.
 
-Чекори за извршување:
-- Отвори ја папката `GoogleColabs`.
-- Отвори ја датотеката `Treniranje_Svoj_Tenserflow_Model.ipynb` во Google Colab.
-- Изврши ги чекорите во `Treniranje_Svoj_Tenserflow_Model.ipynb` за да го тренираш и тестираш моделот со користење на Oxford-IIIT Pet базата на податоци.
+### Custom Model with TensorFlow
+A simple Convolutional Neural Network (CNN) using TensorFlow and Keras for basic colorization.
 
-- ## Лиценца
-- Овој проект е лиценциран под MIT лиценца - погледнете ја LICENSE датотеката за детали.
+Steps to run:
+- Open the `GoogleColabs` folder.
+- Open the file `Treniranje_Svoj_Tenserflow_Model.ipynb` in Google Colab.
+- Run the steps in `Treniranje_Svoj_Tenserflow_Model.ipynb` to train and test the model using the Oxford-IIIT Pet dataset.
+
+## License
+This project is licensed under the MIT License – see the LICENSE file for details.
